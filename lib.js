@@ -15,6 +15,24 @@ function sortby () {
     return position
   }
 
+  function sentinelLinearSearch (array, key) {
+    var position = 'not found'
+    var n = array.length
+    var last = array[n]
+    array[n] = key
+    var i = 0
+    while (array[i] !== key) {
+      i++
+    }
+    position = 'sentinel linear search: position: ' + i
+    if (i === n) {
+      if (last !== key) {
+        position = 'not found'
+      }
+    }
+    return position
+  }
+
   function binarySearch (array, key) {
     var position = 'your element is in another array'
     var n = array.length
@@ -38,6 +56,7 @@ function sortby () {
   return {
     testFunc: testFunc,
     linearSearch: linearSearch,
+    sentinelLinearSearch: sentinelLinearSearch,
     binarySearch: binarySearch
   }
 }

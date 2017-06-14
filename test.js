@@ -10,4 +10,5 @@ console.log(sortedArr)
 sortby.testFunc('test')
 
 console.log(sortby.linearSearch(Arr, 7))
+console.log(sortby.sentinelLinearSearch(Arr, 19))
 console.log(sortby.binarySearch(sortedArr, 2))
