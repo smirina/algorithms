@@ -53,10 +53,27 @@ function sortby () {
     return position
   }
 
+  function selectionSort (array) {
+
+    for (var i = 0; i < array.length; i++) {
+      var smallest = i
+      for (var j = i+1; j < array.length; j++) {
+        if (array[j] < array[smallest]) {
+          smallest = j
+        }
+        var temp = array[i]
+        array[i] = array[smallest]
+        array[smallest] = temp
+      }
+    }
+
+    return array
+  }
+
   return {
-    testFunc: testFunc,
     linearSearch: linearSearch,
     sentinelLinearSearch: sentinelLinearSearch,
-    binarySearch: binarySearch
+    binarySearch: binarySearch,
+    selectionSort: selectionSort
   }
 }
