@@ -38,14 +38,14 @@ function sortby () {
     var n = array.length
     var first = 0
     var last = n
-    var mid = Math.floor((first+last)/2)
+    var mid = Math.floor((first + last) / 2)
     while(array[mid] !== key && first < last) {
-      if (key < array[mid]){
-          last = mid - 1;
-      } else if (key > array[mid]){
-          first = mid + 1;
+      if (key < array[mid]) {
+          last = mid - 1
+      } else if (key > array[mid]) {
+          first = mid + 1
       }
-      mid = Math.floor((first+last)/2)
+      mid = Math.floor((first + last) / 2)
     }
     if (array[mid] === key) {
       position = 'binary search: position: ' + mid
@@ -56,7 +56,7 @@ function sortby () {
   function selectionSort (array) {
     for (var i = 0; i < (array.length - 1); i++) {
       var smallest = i
-      for (var j = i+1; j < array.length; j++) {
+      for (var j = i + 1; j < array.length; j++) {
         if (array[j] < array[smallest]) {
           smallest = j
         }
