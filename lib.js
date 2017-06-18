@@ -1,7 +1,8 @@
 function sortby () {
 
-  function testFunc (input) {
-    console.log(input)
+  function testFunc () {
+    console.log('test')
+    return 'it works!'
   }
 
   function linearSearch (array, key) {
@@ -9,7 +10,7 @@ function sortby () {
     for (var i = 0; i < array.length; i++) {
       if (array[i] === key) {
         position = 'linear search: position: ' + i
-        break;
+        break
       }
     }
     return position
