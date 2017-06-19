@@ -1,4 +1,4 @@
-function sortby () {
+
 
   function testFunc () {
     console.log('test')
@@ -69,10 +69,10 @@ function sortby () {
   return array
 }
 
-  return {
+module.exports = {
     linearSearch: linearSearch,
     sentinelLinearSearch: sentinelLinearSearch,
     binarySearch: binarySearch,
-    selectionSort: selectionSort
+    selectionSort: selectionSort,
+    testFunc: testFunc
   }
-}
